@@ -69,12 +69,12 @@ const App = ({ signOut }) => {
   }
   return (
     <View className="App">
-      <Heading level={1}>My Notes App</Heading>
+      <Heading level={1}>Mi aplicación de notas</Heading>
       <View as="form" margin="3rem 0" onSubmit={createNote}>
         <Flex direction="row" justifyContent="center">
           <TextField
             name="name"
-            placeholder="Note Name"
+            placeholder="Nombre de la"
             label="Note Name"
             labelHidden
             variation="quiet"
@@ -82,7 +82,7 @@ const App = ({ signOut }) => {
           />
           <TextField
             name="description"
-            placeholder="Note Description"
+            placeholder="Descripción de la nota"
             label="Note Description"
             labelHidden
             variation="quiet"
@@ -93,13 +93,14 @@ const App = ({ signOut }) => {
             as="input"
             type="file"
             style={{ alignSelf: "end" }}
+            label="ss"
           />
           <Button type="submit" variation="primary">
-            Create Note
+            Crear nota
           </Button>
         </Flex>
       </View>
-      <Heading level={2}>Current Notes</Heading>
+      <Heading level={2}>Notas actuales</Heading>
       <View margin="3rem 0">
         {notes.map((note) => (
           <Flex
@@ -120,12 +121,12 @@ const App = ({ signOut }) => {
               />
             )}
             <Button variation="link" onClick={() => deleteNote(note)}>
-              Delete note
+              Eliminar nota
             </Button>
           </Flex>
         ))}
       </View>
-      <Button onClick={signOut}>Sign Out</Button>
+      <Button onClick={signOut}>Finalizar sesión</Button>
     </View>
   );
 };

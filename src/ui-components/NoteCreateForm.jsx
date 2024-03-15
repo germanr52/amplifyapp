@@ -126,7 +126,7 @@ export default function NoteCreateForm(props) {
       {...rest}
     >
       <TextField
-        label="Name"
+        label="Nombre de la nota"
         isRequired={true}
         isReadOnly={false}
         value={name}
@@ -152,7 +152,7 @@ export default function NoteCreateForm(props) {
         {...getOverrideProps(overrides, "name")}
       ></TextField>
       <TextField
-        label="Description"
+        label="Descripción"
         isRequired={false}
         isReadOnly={false}
         value={description}
